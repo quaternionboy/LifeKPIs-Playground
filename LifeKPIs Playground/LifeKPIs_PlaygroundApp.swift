@@ -10,23 +10,27 @@ import SwiftData
 
 @main
 struct LifeKPIs_PlaygroundApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    
+    let container: ModelContainer
+    let dataManager: DataManager
+    
+    init(){
+        container = {
+            do {
+                return try ModelContainer(for: Item.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+            } catch {
+                fatalError("Could not create ModelContainer: \(error)")
+            }
+        }()
+        
+        dataManager = DataManager(container:container)
+    }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(container)
+        .environment(dataManager)
     }
 }

@@ -10,9 +10,16 @@ import SwiftData
 
 @Model
 final class Item {
-    var timestamp: Date
+    var data: String
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    init() {
+        self.data = "Origin"
+    }
+}
+
+extension Item {
+    func update() async {
+        //heavy work...
+        data = "Edited"
     }
 }

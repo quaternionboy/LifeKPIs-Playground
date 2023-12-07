@@ -12,6 +12,7 @@
 		FB1DC25A2B1F9105000AD367 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1DC2592B1F9105000AD367 /* Item.swift */; };
 		FB1DC25C2B1F9106000AD367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1DC25B2B1F9106000AD367 /* Assets.xcassets */; };
 		FB1DC25F2B1F9106000AD367 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1DC25E2B1F9106000AD367 /* Preview Assets.xcassets */; };
+		FB76374E2B20533A00A36BE3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76374D2B20533A00A36BE3 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		FB1DC2592B1F9105000AD367 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FB1DC25B2B1F9106000AD367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB1DC25E2B1F9106000AD367 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB76374D2B20533A00A36BE3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				FB1DC2552B1F9105000AD367 /* LifeKPIs_PlaygroundApp.swift */,
 				FB1DC2572B1F9105000AD367 /* ContentView.swift */,
+				FB76374D2B20533A00A36BE3 /* DataManager.swift */,
 				FB1DC2592B1F9105000AD367 /* Item.swift */,
 				FB1DC25B2B1F9106000AD367 /* Assets.xcassets */,
 				FB1DC25D2B1F9106000AD367 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB76374E2B20533A00A36BE3 /* DataManager.swift in Sources */,
 				FB1DC2582B1F9105000AD367 /* ContentView.swift in Sources */,
 				FB1DC25A2B1F9105000AD367 /* Item.swift in Sources */,
 				FB1DC2562B1F9105000AD367 /* LifeKPIs_PlaygroundApp.swift in Sources */,
@@ -209,6 +213,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -264,6 +269,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -284,6 +290,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +320,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
