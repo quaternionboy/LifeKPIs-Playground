@@ -10,16 +10,11 @@ import SwiftData
 
 @Model
 final class Item {
-    var data: String
+    var name: String
+    var data: Double?
     
-    init() {
-        self.data = "Origin"
+    init(name: String) {
+        self.name = name
     }
 }
 
-extension Item {
-    func update() async {
-        //heavy work...
-        data = "Edited"
-    }
-}

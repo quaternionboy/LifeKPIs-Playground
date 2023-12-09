@@ -9,20 +9,20 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Environment(DataManager.self) private var dataManager
     @Query private var items: [Item]
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    HStack{
-                        Text(item.data)
-                        Button("Edit"){
-                            Task{
-                                await dataManager.updateItem(id: item.id)
-                            }
+                    VStack(alignment: .leading){
+                        Text("Name: \(item.name)")
+                        if let data = item.data{
+                            Text("Data: \(data)")
+                        }
+                        NavigationLink("Compute Data"){
+                            ItemEditView(item: item)
                         }
                     }
                 }
@@ -43,7 +43,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item()
+            let newItem = Item(name: "Name\(items.count)")
             modelContext.insert(newItem)
         }
     }

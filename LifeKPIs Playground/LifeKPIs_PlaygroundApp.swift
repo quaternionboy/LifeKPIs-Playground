@@ -12,7 +12,6 @@ import SwiftData
 struct LifeKPIs_PlaygroundApp: App {
     
     let container: ModelContainer
-    let dataManager: DataManager
     
     init(){
         container = {
@@ -22,8 +21,6 @@ struct LifeKPIs_PlaygroundApp: App {
                 fatalError("Could not create ModelContainer: \(error)")
             }
         }()
-        
-        dataManager = DataManager(container:container)
     }
 
     var body: some Scene {
@@ -31,6 +28,5 @@ struct LifeKPIs_PlaygroundApp: App {
             ContentView()
         }
         .modelContainer(container)
-        .environment(dataManager)
     }
 }
